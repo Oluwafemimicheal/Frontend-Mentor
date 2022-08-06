@@ -39,27 +39,20 @@ window.onload = () => {
             });
             display = display.join(' ')
             view.innerHTML = display
+            const level = document.querySelectorAll('.role')
+            const positionEdit = document.querySelector('.popup')
+            const clear = document.getElementById('clear')
+
+
+
+            level.forEach((btn) => {
+                btn.onclick = () => {
+                    positionEdit.classList.add('show')
+                }
+            })
+            clear.onclick = () => {
+                positionEdit.classList.remove('show')
+            }
         })
 
 }
-
-const level = document.querySelectorAll('.role')
-const positionEdit = document.querySelector('.popup')
-const clear = document.getElementById('clear')
-
-
-
-level.forEach((btn) => {
-    btn.onclick = () => {
-        positionEdit.classList.add('show')
-    }
-})
-clear.onclick = () => {
-    positionEdit.classList.remove('show')
-}
-const btn = document.querySelector('.new')
-const displayNew = data.filter((e) => {
-    if (displayNew.e.new === false) {
-        btn.style.display = 'none'
-    }
-})
