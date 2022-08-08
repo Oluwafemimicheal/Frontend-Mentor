@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="./design/style.css">
+
 </head>
+
 <body>
+    <div class="container">
+        <img src="images/bg-main-desktop.png" alt="">
+        <div class="cards">
+            <div class="con1">
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="number">
+                    <h1>9591 6489 6389 101E</h1>
+                </div>
+                <div class="name">
+                    <p>FELICIA LEIRE</p>
+                    <p>09/00</p>
+                </div>
+            </div>
+            <div class="con2">
+            </div>
+        </div>
+        <div class="info">
+            <form action="">
+                <div class="div">
+                    <label for="name">CARDHOLDER NAME</label>
+                    <input type="text" name="name" placeholder="User Name">
+                </div>
+                <div class="div">
+                    <label for="name">CARD NUMBER</label>
+                    <input type="text" name="name" placeholder="0000 0000 0000 0000" pattern="1234567890">
+                </div>
+                <div class="div">
+                    <label for=""> EXP DATE (MM/YY)        CVC</label>
+                    <div class="num">
+                        <input class="mm" type="text" placeholder="MM" pattern="1234567890">
+                        <input class="yy" type="text" placeholder="YY" pattern="1234567890">
+                        <input class="cvc" type="text" placeholder="e.g. 123" pattern="1234567890">
+                        <p id="cvc"></p>
+                    </div>
+                </div>
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
+
 </html>

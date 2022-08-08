@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container .con1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 18%;
+    left: 15%;
+    background: url('/images/bg-card-front.png');
+    padding: 30px 20px;
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.con1 span:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: 30px 20px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.con1 span:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 30px 20px;
+    top: 8%;
+    left: 15%;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+.con1 .number {
+    margin-top: 90px;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.con1 .name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.container .con2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 52%;
+    left: 22%;
+    background: url('/images/bg-card-back.png');
+    padding: 30px 20px;
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.info {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.info form .div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.info form .div input {
+    padding: 5px 10px;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+    outline: none;
+}
+
+.div .num .mm {
+    width: 10%;
+}
+
+.div .num .yy {
+    width: 10%;
+}
+
+.div .num .cvc {
+    width: 20%;
+}
