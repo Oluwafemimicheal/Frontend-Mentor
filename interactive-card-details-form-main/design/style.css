@@ -9,20 +9,24 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100vh;
 }
 
-.container .con1 {
+.cards {
+    position: relative;
+    background: url('/images/bg-main-desktop.png');
+}
+
+.cards .con1 {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     top: 18%;
-    left: 15%;
+    left: 40%;
     background: url('/images/bg-card-front.png');
     padding: 30px 20px;
     width: 400px;
@@ -41,7 +45,7 @@ body {
     border-radius: 50%;
 }
 
-.con1 span:nth-child(2) {
+.cards span:nth-child(2) {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -53,7 +57,7 @@ body {
     color: white;
 }
 
-.con1 .number {
+.cards .number {
     margin-top: 90px;
     color: white;
     font-weight: 100;
@@ -62,7 +66,7 @@ body {
     letter-spacing: 2px;
 }
 
-.con1 .name {
+.cards .name {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -71,14 +75,14 @@ body {
     color: white;
 }
 
-.container .con2 {
+.cards .con2 {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     top: 52%;
-    left: 20%;
+    left: 60%;
     background: url('/images/bg-card-back.png');
     padding: 30px 20px;
     width: 400px;
@@ -86,65 +90,247 @@ body {
     border-radius: 10px;
 }
 
-.info {
-    position: absolute;
-    top: 35%;
-    left: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.info form {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.info form .div {
+.container .info {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 30px;
+    align-items: center;
+    padding-left: 150px;
 }
 
-.info form .div input {
-    width: 60%;
-    height: 0%;
-    padding: 5px 10px;
-    border: 2px solid skyblue;
-    border-radius: 5px;
-    outline: none;
+.info form {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+form .div {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px;
 }
 
 .div label {
+    color: rgb(53, 53, 53);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.div input {
+    font-size: 18px;
+    border: 1px solid rgb(225, 225, 225);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(53, 53, 53);
+}
+
+.div input::placeholder {
+    font-size: 18px;
+    color: rgb(200, 199, 199);
+}
+
+.div button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(18, 18, 57);
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    color: rgb(71, 71, 71);
+    font-size: 20px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.div button:hover {
+    background-color: rgb(29, 29, 71);
 }
 
 .div .num .mm {
-    width: 10%;
+    width: 22%;
+    margin-right: 10px;
 }
 
 .div .num .yy {
-    width: 10%;
+    width: 22%;
+    margin-right: 10px;
 }
 
 .div .num .cvc {
-    width: 38%;
+    width: 48%;
 }
 
-form button {
-    width: 60%;
-    padding: 5px 10px;
-    background-color: rgb(16, 16, 52);
+.info .div span {
+    margin-left: 28px;
+}
+
+.info .pop-message {
+    width: 30%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .4s ease;
+}
+
+.pop-message img,
+.text,
+button {
+    margin-bottom: 20px;
+}
+
+.text {
+    line-height: 40px;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 22px;
+    color: rgb(39, 39, 39);
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.text p {
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+    letter-spacing: 2px;
+}
+
+.pop-message button {
+    width: 100%;
+    border: none;
+    padding: 10px;
     border-radius: 5px;
+    background-color: rgb(18, 18, 57);
     color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+    }
+    .cards {
+        background: url('/images/bg-main-mobile.png') no-repeat;
+    }
+    .cards .con1 {
+        top: 50%;
+        left: 5%;
+        width: 280px;
+        height: 170px;
+        z-index: 2;
+    }
+    .cards .con2 {
+        top: 10%;
+        left: 20%;
+        background: url('/images/bg-card-back.png');
+        width: 280px;
+        height: 170px;
+    }
+    .con1 span:nth-child(1) {
+        width: 35px;
+        height: 35px;
+        margin: 20px 20px;
+    }
+    .cards span:nth-child(2) {
+        width: 20px;
+        height: 20px;
+        top: -2%;
+        left: 15%;
+    }
+    .cards .number {
+        margin-top: 80px;
+        font-weight: 100;
+        font-size: 10px;
+        word-spacing: 3px;
+    }
+    .cards .name {
+        font-size: 12px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        color: white;
+    }
+    .container .info {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        margin-top: 80px;
+    }
+    form {
+        visibility: hidden;
+        min-width: 100%;
+    }
+    div .num .mm {
+        width: 20%;
+        margin-right: 10px;
+    }
+    .div .num .yy {
+        width: 20%;
+        margin-right: 10px;
+    }
+    .div .num .cvc {
+        width: 48.5%;
+    }
+    .info .pop-message {
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: .4s ease;
+    }
+    .pop-message img,
+    .text,
+    button {
+        margin-bottom: 20px;
+    }
+    .text {
+        line-height: 40px;
+        text-align: center;
+    }
+    .text h1 {
+        font-size: 22px;
+        color: rgb(31, 31, 31);
+        word-spacing: 5px;
+    }
+    .text p {
+        font-size: 18px;
+        color: rgb(124, 124, 124);
+    }
+    .pop-message button {
+        width: 80%;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgb(18, 18, 57);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 100;
+        font-size: 20px;
+        transition: .4s ease;
+        cursor: pointer;
+    }
 }

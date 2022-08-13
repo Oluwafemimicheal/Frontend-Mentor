@@ -10,12 +10,12 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
     <link rel="stylesheet" href="./design/style.css">
+    <script src="index.js" defer></script>
 
 </head>
 
 <body>
     <div class="container">
-        <img src="images/bg-main-desktop.png" alt="">
         <div class="cards">
             <div class="con1">
                 <div>
@@ -23,7 +23,7 @@
                     <span></span>
                 </div>
                 <div class="number">
-                    <h1>9591 6489 6389 101E</h1>
+                    <h1>9591 6489 6389 1011</h1>
                 </div>
                 <div class="name">
                     <p>FELICIA LEIRE</p>
@@ -37,24 +37,39 @@
             <form action="">
                 <div class="div">
                     <label for="name">CARDHOLDER NAME</label>
-                    <input type="text" name="name" placeholder="User Name">
+                    <input type="text" name="name" placeholder="e.g Oluwafemi Micheal" required>
                 </div>
                 <div class="div">
                     <label for="name">CARD NUMBER</label>
-                    <input type="text" name="name" placeholder="0000 0000 0000 0000" pattern="1234567890">
+                    <input type="text" class='new' id="card-number" name="name" placeholder="e.g 3452 5647 3214 9800" maxlength="16" required>
                 </div>
                 <div class="div">
-                    <label for=""> EXP DATE (MM/YY)        CVC</label>
+                    <label for=""> EXP DATE (MM/YY)  <span>CVC</span></label>
                     <div class="num">
-                        <input class="mm" type="text" placeholder="MM" pattern="1234567890">
-                        <input class="yy" type="text" placeholder="YY" pattern="1234567890">
-                        <input class="cvc" type="text" placeholder="e.g. 123" pattern="1234567890">
+                        <input class="mm" type="text" placeholder="MM" maxlength="2" required>
+                        <input class="yy" type="text" placeholder="YY" maxlength="2" required>
+                        <input class="cvc" type="text" placeholder="e.g. 123" maxlength="3" required>
                         <p id="cvc"></p>
                     </div>
                 </div>
-                <button type="submit">Confirm</button>
+                <div class="div">
+                    <button id="btn" type="submit">Confirm</button>
+                </div>
             </form>
+            <div class="pop-message">
+                <div class="img">
+                    <img src="./images/icon-complete.svg" alt="">
+                </div>
+                <div class="text">
+                    <h1>THANK YOU!</h1>
+                    <p>We've added your card details</p>
+                </div>
+
+                <button id="btn" type="submit">Continue</button>
+
+            </div>
         </div>
+    </div>
 
 </body>
 
