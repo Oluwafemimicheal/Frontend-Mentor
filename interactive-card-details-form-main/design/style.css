@@ -218,7 +218,7 @@ button {
     cursor: pointer;
 }
 
-@media(max-width: 900px) {
+@media(max-width: 600px) {
     .container {
         grid-template-columns: 100%;
         grid-template-rows: 40% 60%;

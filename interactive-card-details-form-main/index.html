@@ -37,23 +37,24 @@
             <form action="">
                 <div class="div">
                     <label for="name">CARDHOLDER NAME</label>
-                    <input type="text" name="name" placeholder="e.g Oluwafemi Micheal" required>
+                    <input type="text" name="name" placeholder="e.g Oluwafemi Micheal">
                 </div>
                 <div class="div">
                     <label for="name">CARD NUMBER</label>
-                    <input type="text" class='new' id="card-number" name="name" placeholder="e.g 3452 5647 3214 9800" maxlength="16" required>
+                    <input type="text" class='new' id="card-number" name="name" placeholder="e.g 3452 5647 3214 9800" pattern="[0-9]{4,16}" maxlength="16" autofocus required>
+                    <p id="num-meg"></p>
                 </div>
                 <div class="div">
                     <label for=""> EXP DATE (MM/YY)  <span>CVC</span></label>
                     <div class="num">
-                        <input class="mm" type="text" placeholder="MM" maxlength="2" required>
-                        <input class="yy" type="text" placeholder="YY" maxlength="2" required>
-                        <input class="cvc" type="text" placeholder="e.g. 123" maxlength="3" required>
+                        <input class="mm" type="text" placeholder="MM" maxlength="2">
+                        <input class="yy" type="text" placeholder="YY" maxlength="2">
+                        <input class="cvc" type="text" placeholder="e.g. 123" maxlength="3">
                         <p id="cvc"></p>
                     </div>
                 </div>
                 <div class="div">
-                    <button id="btn" type="submit">Confirm</button>
+                    <button id="btn">Confirm</button>
                 </div>
             </form>
             <div class="pop-message">
