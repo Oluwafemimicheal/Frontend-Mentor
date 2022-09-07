@@ -16,7 +16,7 @@ body {
 
 .cards {
     position: relative;
-    background: url('/images/bg-main-desktop.png');
+    background: url(./images/bg-main-desktop.png);
 }
 
 .cards .con1 {
@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     top: 18%;
     left: 40%;
-    background: url('/images/bg-card-front.png');
+    background: url(./images/bg-card-front.png);
     padding: 30px 20px;
     width: 400px;
     height: 220px;
@@ -83,7 +83,7 @@ body {
     flex-direction: column;
     top: 52%;
     left: 60%;
-    background: url('/images/bg-card-back.png');
+    background: url(./images/bg-card-back.png);
     padding: 30px 20px;
     width: 400px;
     height: 220px;
@@ -224,7 +224,7 @@ button {
         grid-template-rows: 40% 60%;
     }
     .cards {
-        background: url('/images/bg-main-mobile.png') no-repeat;
+        background: url(./images/bg-main-desktop.png) no-repeat;
     }
     .cards .con1 {
         top: 50%;
@@ -236,7 +236,7 @@ button {
     .cards .con2 {
         top: 10%;
         left: 20%;
-        background: url('/images/bg-card-back.png');
+        background: url(./images/bg-card-back.png);
         width: 280px;
         height: 170px;
     }
