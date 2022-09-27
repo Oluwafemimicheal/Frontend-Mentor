@@ -1,11 +1,11 @@
 const view = document.querySelector('.main')
 
 window.onload = () => {
-    const data = fetch('data.json')
-        .then(Response => Response.json())
-        .then(data => {
-            let display = data.map((contact) => {
-                return `
+        const data = fetch('data.json')
+            .then(Response => Response.json())
+            .then(data => {
+                    let display = data.map((contact) => {
+                        return `
     <ul class="list">
         <li>
             <div class="profile">
@@ -36,23 +36,20 @@ window.onload = () => {
         </li>
     </ul>
     `
-            });
-            display = display.join(' ')
-            view.innerHTML = display
-            const level = document.querySelectorAll('.role')
-            const positionEdit = document.querySelector('.popup')
-            const clear = document.getElementById('clear')
+                    });
+                    display = display.join(' ')
+                    view.innerHTML = display
+                    const level = document.querySelectorAll('.role')
+                    const positionEdit = document.querySelector('.popup')
+                    const clear = document.getElementById('clear'
 
+                        level.forEach((btn) => {
+                            btn.onclick = () => {
+                                positionEdit.classList.add('show')
+                            }
+                        }) clear.onclick = () => {
+                            positionEdit.classList.remove('show')
+                        }
+                    })
 
-
-            level.forEach((btn) => {
-                btn.onclick = () => {
-                    positionEdit.classList.add('show')
-                }
-            })
-            clear.onclick = () => {
-                positionEdit.classList.remove('show')
             }
-        })
-
-}
